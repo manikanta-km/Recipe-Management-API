@@ -21,12 +21,12 @@ public class Recipe {
     private List<String> recipeIngredients;
     private String preparationTime;
     private String instructions;
+    private Integer servings;
     private Categories recipeCategory;
     private Cuisine cuisine;
-    private Integer servings;
-    private String NutritionalInformation;
     private RecipeFormat recipeFormat;
     private Seasoning seasoning;
+    private String NutritionalInformation;
     private String tags;
     private LocalDateTime timeStamp;
 
@@ -35,4 +35,12 @@ public class Recipe {
     @ManyToOne
     @JoinColumn(name = "fk_owner_user_id")
     private User recipeOwner;
+
+    @OneToMany
+    @JoinColumn(name = "no_of_likes")
+    private List<Likes> likes;
+
+    @OneToMany
+    @JoinColumn(name = "no_of_comments")
+    private List<Comment> comments;
 }

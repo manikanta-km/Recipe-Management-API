@@ -19,7 +19,6 @@ public class User {
     private String userName;
     @Column(unique = true)
     private String userEmail;
-    //@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$")
     private String userPassword;
     @Enumerated(EnumType.STRING)
     private Gender gender;

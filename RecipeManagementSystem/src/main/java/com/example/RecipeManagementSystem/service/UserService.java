@@ -12,6 +12,7 @@ import java.security.NoSuchAlgorithmException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -108,17 +109,6 @@ public class UserService {
             return "Un Authenticated Access!!!";
         }
     }
-
-    public String deleteUser(String email, String token) {
-        if (authenticationService.authenticate(email, token)) {
-            User user = userRepo.findFirstByUserEmail(email);
-            Integer userId = user.getUserId();
-            userRepo.deleteById(userId);
-            return "User Deleted";
-        } else
-            return "Un Authenticated Access";
-    }
-
 
     public String createRecipe(String email, String tokenValue, Recipe recipe) {
         if (authenticationService.authenticate(email, tokenValue)) {
@@ -473,5 +463,39 @@ public class UserService {
     public List<Recipe> getRecipesByTags(String tagName){
         return recipeRepo.findByTags(tagName);
     }
+
+    public List<Recipe> getMostLikedRecipe(){
+        return recipeRepo.findFirstByOrderByLikesDesc();
+    }
+
+    public List<Recipe> getMostCommentedRecipe() {
+        return recipeRepo.findFirstByOrderByCommentsDesc();
+    }
+
+    public List<Recipe> getRecipesByIngredientsAndCategory(String ingredients, Categories recipeCategory) {
+        List<Recipe> allRecipes = recipeRepo.findAll();
+        List<Recipe> relevantRecipes = new ArrayList<>();
+
+        for (Recipe recipe : allRecipes) {
+            List<String> recipeIngredients = recipe.getRecipeIngredients();
+
+            if (recipeIngredients != null && containsAny(recipeIngredients, Arrays.asList(ingredients.split(","))) &&
+                    recipe.getRecipeCategory() == recipeCategory) {
+                relevantRecipes.add(recipe);
+            }
+        }
+
+        return relevantRecipes;
+    }
+
+    private boolean containsAny(List<String> source, List<String> target) {
+        for (String element : target) {
+            if (source.contains(element)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

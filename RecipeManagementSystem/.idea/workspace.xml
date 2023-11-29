@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78f12fc3-75e3-4753-ac39-2a5b3891f266" name="Changes" comment="" />
+    <list default="true" id="78f12fc3-75e3-4753-ac39-2a5b3891f266" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/model/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/model/Categories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/model/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/model/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/repo/IRecipeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/repo/IRecipeRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/RecipeManagementSystem/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/model/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/model/Recipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/repo/IRecipeRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/repo/IRecipeRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/RecipeManagementSystem/service/UserService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,13 +56,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.RecipeManagementSystem.model" />

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -30,11 +31,6 @@ public class UserController {
     public String userSignOut(@RequestParam String email, @RequestParam String token)
     {
         return userService.userSignOut(email,token);
-    }
-
-    @DeleteMapping("delete/user")
-    public String deleteUser(@RequestParam String email, @RequestParam String token){
-        return userService.deleteUser(email,token);
     }
 
     @PostMapping("Recipe")
@@ -177,5 +173,22 @@ public class UserController {
     public List<Recipe> getRecipesByTags(@RequestParam String tagName){
         return userService.getRecipesByTags(tagName);
     }
+
+    @GetMapping("mostLikedRecipe")
+    public List<Recipe> getMostLikedRecipe(){
+        return userService.getMostLikedRecipe();
+    }
+
+    @GetMapping("mostCommentedRecipe")
+    public List<Recipe> getMostCommentedRecipe(){
+        return userService.getMostCommentedRecipe();
+    }
+
+    @GetMapping("recipesByIngredients")
+    public  List<Recipe> getRecipesByIngredients(@RequestParam String ingredients, @RequestParam Categories categories){
+        List<String> ingredientList = Arrays.asList(ingredients.split(","));
+        return userService.getRecipesByIngredientsAndCategory(ingredients, categories);
+    }
+
 
 }
